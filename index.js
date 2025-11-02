@@ -29,8 +29,8 @@ function checkcust(){
     let lengthEl=document.getElementById("length-el").value
     let num=Number(lengthEl)
 
-    if(num<8){
-        alert("pleas enter a number mor then 8")
+    if(num<8 || num>20){
+        alert("pleas enter a number between 8 to 20")
         return
     }
 
