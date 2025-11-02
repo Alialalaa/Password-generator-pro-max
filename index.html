@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <div class="cust">
+            <h1>Customization:</h1>
+            <form>
+                
+                <h2>Set password langth:</h2>
+                <input id="length-el" type="number" min="8" max="20" required placeholder="length from 8 to 20">
+                <h2>Customiz:</h2>
+                <label class="container">Symbols
+                <input id="chois-symbol-el" type="checkbox" >
+                <span class="checkmark"></span>
+                </label>
+                <label class="container">Numbers
+                <input type="checkbox" id="chois-number-el">
+                <span class="checkmark"></span>
+                </label>
+                
+                
+            </form>
+        
+
+        </div>
+        <div class="sepi"></div>
+        <div class="fram">
+            <div class="cirnel">
+                <h1>Generate a <span>random Password</span></h1>
+                <p>Never use an insecur Password again</p>
+                <button id="btn">Generate Passwords</button>
+                
+            </div>
+            <div id="sep"></div>
+            <div class="result">
+                
+                <P class="pass1" id="pass-one-el">password1</P>
+                <p class="pass2" id="pass-two-el">password2</p>
+            </div>
+        </div>
+    </body>
+        <script src="index.js"></script>
+
+</html>
