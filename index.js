@@ -119,3 +119,52 @@ let lengthEl=document.getElementById("length-el").value
     }
     pass2El.textContent=psmix2
 }
+
+
+let copyEl = document.querySelector("#pass-one-el");
+let lableCopyEL=document.querySelector("#lableCopy")
+
+copyEl.addEventListener("click", () => {
+    let targetPassword = document.querySelector("#pass-one-el"); // <-- add # here
+    let textCopy = targetPassword.textContent;
+    
+    lableCopyEL.textContent="copyed!"
+    lableCopyEL.style.backgroundColor = "#273549";
+    setTimeout(() => {
+    lableCopyEL.style.backgroundColor = "#1f2a38";
+    lableCopyEL.textContent=""
+}, 300); // 10000 ms = 10 seconds
+
+
+
+
+    navigator.clipboard.writeText(textCopy)
+        .then(() => {
+            console.log("Copied to clipboard:", textCopy);
+        })
+        .catch(err => {
+            console.error("Failed to copy:", err);
+        });
+});
+let copyEl2 = document.querySelector("#pass-two-el");
+copyEl2.addEventListener("click", () => {
+    let targetPassword2 = document.querySelector("#pass-two-el"); // <-- add # here
+    let textCopy = targetPassword2.textContent;
+    lableCopyEL.textContent="copyed!"
+
+    lableCopyEL.textContent="copyed!"
+    lableCopyEL.style.backgroundColor = "#273549";
+    setTimeout(() => {
+    lableCopyEL.style.backgroundColor = "#1f2a38";
+    lableCopyEL.textContent=""
+}, 300); // 10000 ms = 10 seconds
+
+
+    navigator.clipboard.writeText(textCopy)
+        .then(() => {
+            console.log("Copied to clipboard:", textCopy);
+        })
+        .catch(err => {
+            console.error("Failed to copy:", err);
+        });
+});
